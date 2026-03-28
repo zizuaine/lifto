@@ -30,7 +30,7 @@
 .floating-nav .nav-link {
     font-size: 1.0rem;
     font-weight: 400;
-    color: white;
+    color: black;
     text-decoration: none;
     transition: transform 0.2s ease;
 }
@@ -52,6 +52,20 @@
 .nav-badge svg {
     width: 18px;
     height: 18px;
+}
+
+.auth-nav {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.auth-nav .nav-link {
+    color: black;
+}
+
+.auth-nav .nav-badge {
+    border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .hero-media {
@@ -124,4 +138,584 @@
 .button-charity:hover {
     transform: translateY(-6px);
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.featured-charity {
+    margin: 20px auto 70px;
+    padding: 28px;
+    width: min(1100px, calc(100% - 40px));
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.featured-charity-image,
+.charity-image,
+.charity-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-charity-image::before,
+.charity-image::before,
+.charity-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.featured-charity-image span,
+.charity-image span,
+.charity-hero span {
+    position: relative;
+    z-index: 1;
+}
+
+.featured-charity-image {
+    width: 320px;
+    min-height: 240px;
+    border-radius: 22px;
+    padding: 20px;
+}
+
+.featured-charity-content h2 {
+    margin: 10px 0;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.featured-charity-content p {
+    margin-bottom: 20px;
+    color: #4b5563;
+}
+
+.featured-charity-label {
+    color: #2e5d3f;
+    font-weight: 600;
+}
+
+.auth-page {
+    height: 100dvh;
+    background: #f7f6f1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.auth-section {
+    padding: 110px 20px 24px;
+    flex: 1;
+}
+
+.auth-intro {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.auth-small-title {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.auth-intro h1 {
+    margin: 0 0 10px;
+    font-size: 3.3rem;
+    font-weight: 500;
+    color: black;
+}
+
+.auth-intro p {
+    margin: 0;
+    color: black;
+    font-size: 1rem;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 22px;
+    background: white;
+    border-radius: 34px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.16);
+}
+
+.auth-card-small {
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-toggle {
+    width: fit-content;
+    margin: 0 auto 26px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #e7eee4;
+    border-radius: 999px;
+}
+
+.toggle-link {
+    padding: 12px 22px;
+    border-radius: 999px;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.active-toggle {
+    background: #2e5d3f;
+    color: white;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.auth-row {
+    display: flex;
+    gap: 16px;
+}
+
+.auth-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-field label {
+    color: black;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.auth-field input,
+.auth-field select {
+    width: 100%;
+    padding: 16px 18px;
+    border: 1px solid #d7e0d3;
+    border-radius: 16px;
+    background: #f7f8f3;
+    color: black;
+    font-size: 1rem;
+    outline: none;
+}
+
+.auth-button {
+    width: 100%;
+    padding: 18px 24px;
+    border: none;
+    border-radius: 999px;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    background: #1a1a1a;
+}
+
+.auth-message {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.error-text {
+    color: #b42318;
+}
+
+.success-text {
+    color: #2e5d3f;
+}
+
+@media (max-width: 700px) {
+    .auth-intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .auth-card {
+        padding: 18px;
+    }
+
+    .auth-row {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    .auth-toggle {
+        width: 100%;
+    }
+
+    .toggle-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.subscribe-page {
+    min-height: 100vh;
+    background: #f7f6f1;
+}
+
+.subscribe-section {
+    padding: 140px 20px 80px;
+}
+
+.subscribe-intro {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.subscribe-small-title {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #2e5d3f;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.subscribe-intro h1 {
+    margin: 0 0 12px;
+    font-size: 3.1rem;
+    font-weight: 500;
+    color: #243041;
+}
+
+.subscribe-intro p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #5f6977;
+    font-size: 1rem;
+}
+
+.plans-grid {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    width: 100%;
+    max-width: 380px;
+    padding: 28px;
+    background: white;
+    border-radius: 26px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.plan-badge {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #e3eadf;
+    color: #2e5d3f;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.plan-card h2 {
+    margin: 0 0 16px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #243041;
+}
+
+.plan-price-row {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.plan-price {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #111111;
+    line-height: 1;
+}
+
+.plan-billing {
+    color: #5f6977;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.plan-detail {
+    margin: 0 0 22px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.plan-points {
+    margin-bottom: 24px;
+}
+
+.plan-points p {
+    margin: 0 0 12px;
+    color: #243041;
+}
+
+.plan-button {
+    width: 100%;
+    padding: 16px 24px;
+    border: none;
+    border-radius: 999px;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.plan-button:hover {
+    background: #1a1a1a;
+}
+
+.charity-page {
+    min-height: 100vh;
+    background: #f7f6f1;
+}
+
+.simple-page {
+    min-height: 100vh;
+    background: #f7f6f1;
+}
+
+.simple-page-section {
+    padding: 160px 20px 80px;
+    text-align: center;
+}
+
+.simple-page-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #2e5d3f;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.simple-page-section h1 {
+    margin: 0 0 12px;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.simple-page-section p {
+    margin: 0;
+    color: #5f6977;
+}
+
+.charity-section {
+    padding: 140px 20px 80px;
+}
+
+.charity-intro {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.charity-small-title {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #2e5d3f;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.charity-intro h1 {
+    margin: 0 0 12px;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.charity-intro p {
+    margin: 0;
+    color: #5f6977;
+}
+
+.charity-filter-bar {
+    width: min(820px, 100%);
+    margin: 0 auto 34px;
+    display: flex;
+    gap: 16px;
+}
+
+.charity-filter-bar input,
+.charity-filter-bar select,
+.charity-donation-form input,
+.charity-donation-form textarea {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid #d7e0d3;
+    border-radius: 16px;
+    background: white;
+    font-size: 1rem;
+}
+
+.charity-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.charity-card {
+    width: 100%;
+    max-width: 360px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.charity-image {
+    min-height: 190px;
+    padding: 20px;
+}
+
+.charity-card-body {
+    padding: 22px;
+}
+
+.charity-category {
+    margin: 0 0 10px;
+    color: #2e5d3f;
+    font-weight: 600;
+}
+
+.charity-card-body h2,
+.charity-details-main h1 {
+    margin: 0 0 12px;
+    font-weight: 500;
+}
+
+.charity-card-body p,
+.charity-description,
+.charity-events p,
+.charity-donation-card p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.charity-button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 999px;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.charity-details-layout {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.charity-details-main,
+.charity-donation-card {
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.charity-details-main {
+    flex: 1;
+    padding: 28px;
+}
+
+.charity-hero {
+    min-height: 280px;
+    margin-bottom: 22px;
+    border-radius: 22px;
+    padding: 24px;
+    font-size: 1.6rem;
+}
+
+.charity-donation-card {
+    width: 340px;
+    padding: 24px;
+}
+
+.charity-donation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.charity-donation-form textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.charity-message {
+    margin: 0;
+}
+
+.charity-top-message {
+    width: 100%;
+    margin: 0 auto 24px;
+    padding: 0;
+    text-align: center;
+    background: transparent;
+    border: none;
+}
+
+@media (max-width: 700px) {
+    .subscribe-section {
+        padding: 120px 20px 60px;
+    }
+
+    .subscribe-intro h1 {
+        font-size: 2.4rem;
+    }
+
+    .featured-charity,
+    .charity-details-layout,
+    .charity-filter-bar {
+        flex-direction: column;
+    }
+
+    .featured-charity-image,
+    .charity-donation-card {
+        width: 100%;
+    }
+
+    .charity-section {
+        padding: 120px 20px 60px;
+    }
+
+    .charity-intro h1 {
+        font-size: 2.4rem;
+    }
 }

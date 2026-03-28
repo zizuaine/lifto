@@ -18,11 +18,24 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 body {
     margin: 0;
     min-width: 320px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body.auth-body {
+    overflow: hidden;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
 }
 
 button,

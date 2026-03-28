@@ -2,6 +2,7 @@ import mainImage from "../../src/assets/main.jpg";
 import HowItWorks from "../components/HowItWorks"
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom"
+import FeaturedCharity from "../components/FeaturedCharity";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
             </section>
             <section className="home-info">
                 <HowItWorks />
+                <FeaturedCharity />
 
             </section>
             <div className="home-button" >
