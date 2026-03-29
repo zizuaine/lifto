@@ -35,6 +35,17 @@
     transition: transform 0.2s ease;
 }
 
+.nav-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+    font-family: "Segoe UI", sans-serif;
+    color: inherit;
+    font-weight: 400;
+}
+
 .floating-nav a:hover {
     transform: translateY(-1px);
 }
@@ -120,6 +131,7 @@
     font-size: 1.02rem;
     line-height: 1.6;
     text-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+    word-spacing: 2px;
 }
 
 .home-buttons {
@@ -535,6 +547,184 @@
     background: #1a1a1a;
 }
 
+.subscribe-helper,
+.subscribe-message {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.dashboard-page {
+    min-height: 100vh;
+    background: #f7f6f1;
+}
+
+.dashboard-shell {
+    width: min(1280px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 140px 0 80px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 28px;
+    align-items: start;
+}
+
+.admin-shell {
+    grid-template-columns: 1fr;
+}
+
+.dashboard-sidebar {
+    position: sticky;
+    top: 120px;
+    padding: 28px 20px;
+    background: rgba(255, 255, 255, 0.72);
+    border-radius: 28px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-sidebar-label {
+    margin: 0 0 14px;
+    color: #7b8d7f;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.dashboard-side-link {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    border: none;
+    border-radius: 16px;
+    background: transparent;
+    color: #244533;
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.active-side-link {
+    background: #2f6842;
+    color: white;
+}
+
+.dashboard-section {
+    padding: 0 0 80px;
+    width: 100%;
+    margin: 0;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 12px;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.dashboard-header p {
+    margin: 0;
+    color: #5f6977;
+}
+
+.dashboard-grid,
+.dashboard-split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-bottom: 22px;
+}
+
+.dashboard-split-feature {
+    align-items: start;
+}
+
+.dashboard-card {
+    padding: 24px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-card h2 {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-size: 1.4rem;
+}
+
+.dashboard-card p {
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.dashboard-highlight {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111111;
+}
+
+.dashboard-note {
+    margin-top: 12px;
+    color: #5f6977;
+    font-size: 0.95rem;
+}
+
+.score-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    align-items: stretch;
+}
+
+.score-form input,
+.score-form button,
+.dashboard-card select,
+.proof-form input,
+.admin-note-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d7e0d3;
+    border-radius: 16px;
+    background: #f7f8f3;
+    font-size: 1rem;
+}
+
+.results-list {
+    display: grid;
+    gap: 16px;
+}
+
+.proof-form {
+    display: grid;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.result-item {
+    padding: 18px;
+    border-radius: 18px;
+    background: #f7f8f3;
+}
+
+.result-item p {
+    margin: 0 0 6px;
+}
+
+.admin-panel-block {
+    margin-top: 18px;
+}
+
+.admin-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
 .charity-page {
     min-height: 100vh;
     background: #f7f6f1;
@@ -746,6 +936,28 @@
 
     .subscribe-intro h1 {
         font-size: 2.4rem;
+    }
+
+    .dashboard-section {
+        padding: 0 0 60px;
+    }
+
+    .dashboard-shell {
+        width: calc(100% - 30px);
+        grid-template-columns: 1fr;
+        padding: 120px 0 60px;
+    }
+
+    .dashboard-sidebar {
+        position: static;
+    }
+
+    .dashboard-header h1 {
+        font-size: 2.4rem;
+    }
+
+    .score-form {
+        grid-template-columns: 1fr;
     }
 
     .featured-charity,

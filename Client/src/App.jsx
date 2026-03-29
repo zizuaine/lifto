@@ -9,6 +9,7 @@ import Charities from "./pages/Charities.jsx";
 import CharityDetails from "./pages/CharityDetails.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import Admin from "./pages/Admin.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 
 function App() {
 
@@ -22,7 +23,14 @@ function App() {
           <Route path="/subscribe" element={<Subscribe />} />
           <Route path="/charities" element={<Charities />} />
           <Route path="/charities/:id" element={<CharityDetails />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/admin" element={<Admin />} />
         </Route>
       </Routes>
