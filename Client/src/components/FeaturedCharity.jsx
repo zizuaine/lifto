@@ -5,19 +5,29 @@ import { charityImages } from "../services/charityImages";
 
 const FeaturedCharity = () => {
     const [charity, setCharity] = useState(null);
+    const [error, setError] = useState("");
 
     useEffect(() => {
         const loadFeaturedCharity = async () => {
             try {
                 const data = await charityService.getFeaturedCharity();
                 setCharity(data);
+                setError("");
             } catch (err) {
-                console.log(err.message);
+                setError(err.message);
             }
         };
 
         loadFeaturedCharity();
     }, []);
+
+    if (error) {
+        return (
+            <section className="featured-charity charity-state">
+                <p className="charity-message error-text">{error}</p>
+            </section>
+        );
+    }
 
     if (!charity) {
         return null;

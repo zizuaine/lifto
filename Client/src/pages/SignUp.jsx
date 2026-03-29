@@ -19,8 +19,6 @@ const SignUp = () => {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        document.body.classList.add("auth-body");
-
         const loadCharities = async () => {
             try {
                 const data = await charityService.getCharities();
@@ -38,10 +36,6 @@ const SignUp = () => {
         };
 
         loadCharities();
-
-        return () => {
-            document.body.classList.remove("auth-body");
-        };
     }, []);
 
     const handleChange = (e) => {
@@ -78,8 +72,8 @@ const SignUp = () => {
     };
 
     return (
-        <div className="auth-page page-enter">
-            <section className="auth-section">
+        <div className="auth-page auth-page-scroll page-enter">
+            <section className="auth-section auth-section-scroll">
                 <div className="auth-intro">
                     <span className="auth-small-title">Lifto Account</span>
                     <h1>Create your account</h1>

@@ -43,6 +43,10 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
+button {
+    font-family: "Segoe UI", sans-serif;
+}
+
 .page-enter {
     opacity: 0;
     transform: translateY(40px);
@@ -84,7 +88,7 @@ a {
 
 
 .how-card {
-    background: #e3eadf;
+    background: #ffffff;
     padding: 50px 34px;
     border-radius: 18px;
     width: 400px;

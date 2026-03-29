@@ -16,8 +16,10 @@ const Charities = () => {
             try {
                 const data = await charityService.getCharities(search, category);
                 setCharities(data);
+                setError("");
             } catch (err) {
                 setError(err.message);
+                setCharities([]);
             }
         };
 
@@ -48,28 +50,32 @@ const Charities = () => {
                     </select>
                 </div>
 
-                {error ? <p className="charity-message error-text">{error}</p> : null}
-
-                <div className="charity-grid">
-                    {charities.map((charity) => (
-                        <div key={charity._id} className="charity-card">
-                            <div
-                                className="charity-image"
-                                style={{ backgroundImage: `url(${charityImages[charity.theme]})` }}
-                            >
-                                <span>{charity.name}</span>
+                {error ? (
+                    <div className="charity-state">
+                        <p className="charity-message error-text">{error}</p>
+                    </div>
+                ) : (
+                    <div className="charity-grid">
+                        {charities.map((charity) => (
+                            <div key={charity._id} className="charity-card">
+                                <div
+                                    className="charity-image"
+                                    style={{ backgroundImage: `url(${charityImages[charity.theme]})` }}
+                                >
+                                    <span>{charity.name}</span>
+                                </div>
+                                <div className="charity-card-body">
+                                    <p className="charity-category">{charity.category}</p>
+                                    <h2>{charity.name}</h2>
+                                    <p>{charity.shortDescription}</p>
+                                    <Link to={`/charities/${charity._id}`}>
+                                        <button className="charity-button">View Profile</button>
+                                    </Link>
+                                </div>
                             </div>
-                            <div className="charity-card-body">
-                                <p className="charity-category">{charity.category}</p>
-                                <h2>{charity.name}</h2>
-                                <p>{charity.shortDescription}</p>
-                                <Link to={`/charities/${charity._id}`}>
-                                    <button className="charity-button">View Profile</button>
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
             </section>
         </div>
     );
