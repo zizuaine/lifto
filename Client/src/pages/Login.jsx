@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authService } from "../services/authService";
 
@@ -11,14 +11,6 @@ const Login = () => {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        document.body.classList.add("auth-body");
-
-        return () => {
-            document.body.classList.remove("auth-body");
-        };
-    }, []);
 
     const handleChange = (e) => {
         setFormData({
@@ -49,8 +41,8 @@ const Login = () => {
     };
 
     return (
-        <div className="auth-page page-enter">
-            <section className="auth-section">
+        <div className="auth-page auth-page-scroll page-enter">
+            <section className="auth-section auth-section-scroll">
                 <div className="auth-intro">
                     <span className="auth-small-title">Lifto Account</span>
                     <h1>Welcome back</h1>
