@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { charityService } from "../services/charityService";
-import { getCharityThemeClass } from "../services/charityImages";
+import { getCharityImageStyle, getCharityThemeClass } from "../services/charityImages";
 
 const categories = ["All", "Environment", "Sports", "Community"];
 
@@ -60,6 +60,7 @@ const Charities = () => {
                             <div key={charity._id} className="charity-card">
                                 <div
                                     className={`charity-image ${getCharityThemeClass(charity.theme)}`}
+                                    style={getCharityImageStyle(charity.theme)}
                                 >
                                     <span>{charity.name}</span>
                                 </div>
