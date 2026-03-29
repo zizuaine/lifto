@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Community charity artwork</title>
+  <desc id="desc">Abstract community-inspired illustration in calm blue tones.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dff1ff"/>
+      <stop offset="100%" stop-color="#f7fbff"/>
+    </linearGradient>
+    <linearGradient id="shapeA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7bb7e8"/>
+      <stop offset="100%" stop-color="#366eaa"/>
+    </linearGradient>
+    <linearGradient id="shapeB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#9fd0ef"/>
+      <stop offset="100%" stop-color="#5f99cf"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="180" cy="160" r="90" fill="#b2dcf7" opacity="0.9"/>
+  <circle cx="970" cy="150" r="62" fill="#cbe9fb" opacity="0.9"/>
+  <g transform="translate(260 215)">
+    <rect x="0" y="220" width="680" height="210" rx="90" fill="url(#shapeB)"/>
+    <circle cx="120" cy="110" r="78" fill="url(#shapeA)"/>
+    <circle cx="340" cy="72" r="92" fill="url(#shapeA)"/>
+    <circle cx="570" cy="118" r="78" fill="url(#shapeA)"/>
+    <path d="M74 214C130 170 186 170 242 214" fill="none" stroke="#2a5f95" stroke-width="28" stroke-linecap="round"/>
+    <path d="M268 204C318 150 392 150 442 204" fill="none" stroke="#2a5f95" stroke-width="30" stroke-linecap="round"/>
+    <path d="M520 220C574 176 626 176 680 220" fill="none" stroke="#2a5f95" stroke-width="28" stroke-linecap="round"/>
+  </g>
+  <path d="M130 628C278 560 390 560 520 626C612 674 714 690 884 650" fill="none" stroke="#ffffff" stroke-width="18" stroke-linecap="round" opacity="0.5"/>
+</svg>

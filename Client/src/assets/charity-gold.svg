@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Sports charity artwork</title>
+  <desc id="desc">Stylized golf and sport-inspired illustration in warm gold tones.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff4d6"/>
+      <stop offset="100%" stop-color="#fffdf7"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e0b655"/>
+      <stop offset="100%" stop-color="#b9842b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <path d="M0 560C150 500 310 480 450 530C610 590 760 620 1200 520V800H0Z" fill="url(#ground)"/>
+  <path d="M140 640C280 560 400 560 520 620C630 676 740 694 980 630" fill="none" stroke="#f7e1a7" stroke-width="22" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="900" cy="180" r="82" fill="#f2cf71"/>
+  <g transform="translate(420 170)">
+    <path d="M140 0H220C225 98 275 156 356 190C324 252 278 298 228 326L252 430H112L136 326C84 298 38 252 6 190C88 156 138 98 140 0Z" fill="#f2c14e"/>
+    <path d="M0 190C64 174 110 134 130 78C78 94 26 120 0 190Z" fill="#d79b1e"/>
+    <path d="M360 190C296 174 250 134 230 78C282 94 334 120 360 190Z" fill="#d79b1e"/>
+    <rect x="146" y="430" width="72" height="38" rx="12" fill="#2f6842"/>
+  </g>
+  <g fill="#ffffff" opacity="0.92">
+    <circle cx="230" cy="612" r="18"/>
+    <circle cx="260" cy="640" r="7"/>
+    <circle cx="214" cy="644" r="7"/>
+  </g>
+</svg>
