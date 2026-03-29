@@ -1,9 +1,11 @@
-import charityBlueImage from "../assets/charity-blue.svg";
-import charityGoldImage from "../assets/charity-gold.svg";
-import charityGreenImage from "../assets/charity-green.svg";
+const supportedThemes = new Set(["green", "gold", "blue"]);
 
-export const charityImages = {
-    green: charityGreenImage,
-    gold: charityGoldImage,
-    blue: charityBlueImage
+export const getCharityThemeClass = (theme) => {
+    const normalizedTheme = String(theme || "").toLowerCase();
+
+    if (supportedThemes.has(normalizedTheme)) {
+        return `charity-theme-${normalizedTheme}`;
+    }
+
+    return "charity-theme-green";
 };

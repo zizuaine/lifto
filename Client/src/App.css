@@ -184,6 +184,28 @@
     overflow: hidden;
 }
 
+.charity-theme-green {
+    background-color: #46734d;
+    background-image:
+        radial-gradient(circle at 18% 20%, rgba(244, 221, 122, 0.92) 0 8%, transparent 9%),
+        linear-gradient(180deg, rgba(223, 245, 216, 1) 0%, rgba(248, 255, 241, 1) 46%, rgba(96, 148, 79, 1) 46%, rgba(47, 104, 66, 1) 100%);
+}
+
+.charity-theme-gold {
+    background-color: #9d6a1f;
+    background-image:
+        radial-gradient(circle at 76% 22%, rgba(242, 207, 113, 0.95) 0 10%, transparent 11%),
+        linear-gradient(180deg, rgba(255, 244, 214, 1) 0%, rgba(255, 253, 247, 1) 48%, rgba(224, 182, 85, 1) 48%, rgba(185, 132, 43, 1) 100%);
+}
+
+.charity-theme-blue {
+    background-color: #3b6ea7;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(178, 220, 247, 0.95) 0 10%, transparent 11%),
+        radial-gradient(circle at 80% 18%, rgba(203, 233, 251, 0.95) 0 7%, transparent 8%),
+        linear-gradient(180deg, rgba(223, 241, 255, 1) 0%, rgba(247, 251, 255, 1) 42%, rgba(123, 183, 232, 1) 42%, rgba(54, 110, 170, 1) 100%);
+}
+
 .featured-charity-image::before,
 .charity-image::before,
 .charity-hero::before {

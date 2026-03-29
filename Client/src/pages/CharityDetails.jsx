@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { charityService } from "../services/charityService";
-import { charityImages } from "../services/charityImages";
+import { getCharityThemeClass } from "../services/charityImages";
 
 const CharityDetails = () => {
     const { id } = useParams();
@@ -84,8 +84,7 @@ const CharityDetails = () => {
                     <div className="charity-details-layout">
                         <div className="charity-details-main">
                             <div
-                                className="charity-hero"
-                                style={{ backgroundImage: `url(${charityImages[charity.theme]})` }}
+                                className={`charity-hero ${getCharityThemeClass(charity.theme)}`}
                             >
                                 <span>{charity.name}</span>
                             </div>
