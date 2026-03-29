@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
 
 :root {
     font-family: "Outfit", "Segoe UI", sans-serif;
@@ -14,6 +14,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: inherit;
 }
 
 html {
@@ -43,8 +44,11 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
-button {
-    font-family: "Segoe UI", sans-serif;
+button,
+input,
+textarea,
+select {
+    font-family: "Outfit", "Segoe UI", sans-serif;
 }
 
 .page-enter {

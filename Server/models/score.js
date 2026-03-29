@@ -9,6 +9,11 @@ const scoreSchema = new Schema({
         ref: "User",
         required: true
     },
+    course: {
+        type: String,
+        required: true,
+        trim: true
+    },
     score: {
         type: Number,
         min: 1,

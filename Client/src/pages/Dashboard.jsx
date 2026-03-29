@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { drawService } from "../services/drawService";
 
 const Dashboard = () => {
+    const navigate = useNavigate();
     const [dashboard, setDashboard] = useState(null);
     const [scoreForm, setScoreForm] = useState({ score: "", date: "", course: "" });
     const [proofLinks, setProofLinks] = useState({});
@@ -71,6 +72,12 @@ const Dashboard = () => {
         } catch (err) {
             setError(err.message);
         }
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        navigate("/login");
     };
 
     if (loading) {
@@ -237,6 +244,7 @@ const Dashboard = () => {
                                 <h2>Profile</h2>
                                 <p>Name: {dashboard?.profile?.firstname} {dashboard?.profile?.lastname}</p>
                                 <p>Email: {dashboard?.profile?.email}</p>
+                                <button className="plan-button profile-logout-button" onClick={handleLogout}>Logout</button>
                             </div>
 
                             <div className="dashboard-card">

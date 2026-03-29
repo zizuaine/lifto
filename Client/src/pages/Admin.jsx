@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { adminService } from "../services/adminService";
 
 const Admin = () => {
+    const navigate = useNavigate();
     const [credentials, setCredentials] = useState({
         email: "nu50855@gmail.com",
         password: "herbluesky10"
@@ -117,6 +119,13 @@ const Admin = () => {
         }
     };
 
+    const handleAdminLogout = () => {
+        localStorage.removeItem("adminToken");
+        localStorage.removeItem("adminUser");
+        navigate("/admin");
+        window.location.reload();
+    };
+
     if (!localStorage.getItem("adminToken")) {
         return (
             <div className="auth-page page-enter">
@@ -183,6 +192,7 @@ const Admin = () => {
                             <h2>Run Draw</h2>
                             <p>This app uses random monthly draws only.</p>
                             <button className="plan-button" onClick={handleRunDraw}>Trigger Draw</button>
+                            <button className="plan-button profile-logout-button" onClick={handleAdminLogout}>Admin Logout</button>
                         </div>
                     </div>
 

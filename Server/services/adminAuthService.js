@@ -3,6 +3,29 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { JWT_ADMIN_PASSWORD } from "../config.js";
 
+const DEFAULT_ADMIN = {
+    email: "nu50855@gmail.com",
+    password: "herbluesky10",
+    firstname: "Lifto",
+    lastname: "Admin"
+};
+
+async function ensureDefaultAdmin() {
+    let admin = await Admin.findOne({ email: DEFAULT_ADMIN.email });
+
+    if (!admin) {
+        const hashedPassword = await bcrypt.hash(DEFAULT_ADMIN.password, 10);
+        admin = await Admin.create({
+            email: DEFAULT_ADMIN.email,
+            password: hashedPassword,
+            firstname: DEFAULT_ADMIN.firstname,
+            lastname: DEFAULT_ADMIN.lastname
+        });
+    }
+
+    return admin;
+}
+
 export const adminAuthService = {
     async signup({ email, password, firstname, lastname }) {
 
@@ -32,6 +55,8 @@ export const adminAuthService = {
     },
 
     async signin({ email, password }) {
+        await ensureDefaultAdmin();
+
         const admin = await Admin.findOne({
             email
         });
