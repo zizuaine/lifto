@@ -2,6 +2,9 @@
   "name": "lifto-vercel",
   "private": true,
   "type": "module",
+  "scripts": {
+    "build": "npm --prefix Client run build"
+  },
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
