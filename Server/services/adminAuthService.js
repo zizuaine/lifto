@@ -1,5 +1,5 @@
 import Admin from "../models/admin.js"
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { JWT_ADMIN_PASSWORD } from "../config.js";
 

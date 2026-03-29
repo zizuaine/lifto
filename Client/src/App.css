@@ -14,12 +14,15 @@
 
 .floating-nav {
     width: fit-content;
+    max-width: calc(100% - 28px);
     margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 18px;
     padding: 6px 18px;
     border-radius: 999px;
+    overflow-x: auto;
+    scrollbar-width: none;
 
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow:
@@ -33,6 +36,7 @@
     color: black;
     text-decoration: none;
     transition: transform 0.2s ease;
+    white-space: nowrap;
 }
 
 .floating-nav a:hover {
@@ -129,6 +133,7 @@
     justify-content: center;
     gap: 25px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .home-btn {
@@ -669,6 +674,10 @@
     align-items: stretch;
 }
 
+.score-form > :last-child {
+    grid-column: 1 / -1;
+}
+
 .score-form input,
 .score-form button,
 .dashboard-card select,
@@ -922,9 +931,84 @@
     border: none;
 }
 
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 3.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.98rem;
+    }
+
+    .dashboard-shell {
+        width: calc(100% - 32px);
+        grid-template-columns: 210px 1fr;
+        gap: 22px;
+    }
+
+    .charity-details-layout {
+        flex-direction: column;
+    }
+
+    .charity-donation-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 860px) {
+    .hero-header {
+        top: 12px;
+    }
+
+    .floating-nav {
+        justify-content: flex-start;
+        padding: 8px 14px;
+        gap: 14px;
+    }
+
+    .featured-charity {
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .featured-charity-image {
+        width: 100%;
+        min-height: 220px;
+    }
+
+    .dashboard-shell {
+        grid-template-columns: 1fr;
+        padding-top: 120px;
+    }
+
+    .dashboard-sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .dashboard-side-link {
+        margin-bottom: 0;
+    }
+
+    .dashboard-grid,
+    .dashboard-split {
+        grid-template-columns: 1fr;
+    }
+
+    .charity-filter-bar {
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 700px) {
+    .hero-media {
+        height: 76vh;
+    }
+
     .subscribe-section {
-        padding: 120px 20px 60px;
+        padding: 112px 16px 56px;
     }
 
     .subscribe-intro h1 {
@@ -932,25 +1016,35 @@
     }
 
     .dashboard-section {
-        padding: 0 0 60px;
+        padding: 0 0 56px;
     }
 
     .dashboard-shell {
-        width: calc(100% - 30px);
+        width: calc(100% - 24px);
         grid-template-columns: 1fr;
-        padding: 120px 0 60px;
+        padding: 108px 0 56px;
     }
 
     .dashboard-sidebar {
         position: static;
+        grid-template-columns: 1fr;
+        padding: 18px 16px;
     }
 
     .dashboard-header h1 {
         font-size: 2.4rem;
     }
 
+    .dashboard-card {
+        padding: 18px;
+    }
+
     .score-form {
         grid-template-columns: 1fr;
+    }
+
+    .score-form > :last-child {
+        grid-column: auto;
     }
 
     .featured-charity,
@@ -965,7 +1059,7 @@
     }
 
     .charity-section {
-        padding: 120px 20px 60px;
+        padding: 112px 16px 56px;
     }
 
     .charity-intro h1 {
@@ -978,5 +1072,85 @@
 
     .hero-subtitle {
         font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .home-buttons {
+        gap: 14px;
+        margin-inline: 16px;
+    }
+
+    .home-btn,
+    .button-charity,
+    .plan-button,
+    .charity-button,
+    .auth-button {
+        width: 100%;
+    }
+
+    .auth-section {
+        padding: 100px 16px 24px;
+    }
+
+    .simple-page-section {
+        padding: 140px 16px 56px;
+    }
+
+    .charity-details-main,
+    .charity-donation-card {
+        padding: 20px;
+    }
+
+    .charity-hero {
+        min-height: 220px;
+        font-size: 1.3rem;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+    }
+
+    .admin-actions .plan-button,
+    .proof-form .plan-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-nav {
+        border-radius: 22px;
+    }
+
+    .hero-copy {
+        width: calc(100% - 24px);
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .subscribe-intro h1,
+    .auth-intro h1,
+    .charity-intro h1,
+    .dashboard-header h1,
+    .simple-page-section h1 {
+        font-size: 1.9rem;
+    }
+
+    .plan-card,
+    .dashboard-card,
+    .auth-card,
+    .charity-details-main,
+    .charity-donation-card {
+        border-radius: 20px;
+    }
+
+    .featured-charity {
+        width: calc(100% - 24px);
+        margin: 16px auto 48px;
     }
 }
